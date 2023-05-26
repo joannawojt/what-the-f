@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container mt-5">
+  <h1>Articles</h1>
+
+  <div id="articles">
+    <% @articles.each do |article| %>
+      <%= render article %>
+      <p>
+        <%= link_to "Show this article", article, class: "btn" %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New article", new_article_path, class: "btn" %>
+</div>
